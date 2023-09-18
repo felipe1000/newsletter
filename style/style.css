@@ -23,26 +23,57 @@ body{
     background-color: #36384D;
     font-family: Roboto-regular;
     color: #22263D;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 
 main{
     background-color: white;
     margin: auto;
-    max-width: 80%;
+    max-width: 375px;
 }
 
-main h1{
+h1{
     font-family: Roboto-bold;
+    margin: 15px 0 15px 0;
 
+}
+
+h2{
+    font-size: .8rem;
+    padding: 0 40px 0 40px;
+    margin: 10px 0 10px 0;
+}
+
+p{
+    margin: 10px 0 10px 0;
+}
+
+ul{
+    padding: 10px 30px 10px 30px;
+}
+
+li{
+    list-style: url(../assets/images/icon-list.svg);
+    margin: 10px 0 10px 0;
+}
+
+form{padding: 0 40px 0 40px;}
+
+input{
+    width: 100%;
+    height: 40px;
+    border: 2px solid hsl(231, 7%, 60%);
+    border-radius: 5px;
 }
 
 #illustration{
 
-    background: #22263D url(../assets/images/illustration-sign-up-mobile.svg) no-repeat;
+    background: white url(../assets/images/illustration-sign-up-mobile.svg) no-repeat;
     background-size: contain;
-    width: 100%;
-    height: 228px;
+    /* width: 100%;
+    height: 228px; */
+    /* max-width: 299px; */
+    height: 285px;
 
 }
 
@@ -55,7 +86,6 @@ main h1{
     color: hsl(228, 45%, 44%);
  }
 
-/* .statement{
-    margin: auto;
-    max-width: 80%;
- } */
+.statement{
+    padding: 0 40px 0 40px;
+ }
