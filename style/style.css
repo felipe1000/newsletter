@@ -64,6 +64,15 @@ input{
     height: 40px;
     border: 2px solid hsl(231, 7%, 60%);
     border-radius: 5px;
+    text-indent: 25px;
+}
+
+input[type="button"] {
+    text-align: center;
+    text-indent: 0px;
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    font-weight: 700;
 }
 
 #illustration{
