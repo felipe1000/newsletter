@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1440px){
+    body{
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    main{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "statement illustration" "form-email illustration" ;
+        max-width: 645px;
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    #illustration{
+
+        background: white url(../assets/images/illustration-sign-up-desktop.svg) no-repeat center;
+        background-size: contain;
+        height: 100%;
+    
+    }
+
+    .attribution{
+        background-color: #36384D;
+        color: white;
+    }
+    
+}

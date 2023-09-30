@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/media-query.css">
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
@@ -27,11 +28,13 @@
         </ul>
     </div>
     
-      <h2>Email address</h2>
-      <form action="" method="post">
-        <p><input type="email" name="email" id="iEmail" placeholder="email@company.com"></p>
-        <p><input type="button" value="Subscribe to monthly newsletter"></p>
-      </form>
+      <div class="form-email">
+        <h2>Email address</h2>
+        <form action="thanks.html" method="post" autocomplete="on">
+          <p><input type="email" name="email" id="iEmail" placeholder="email@company.com"></p>
+          <p><input type="submit" value="Subscribe to monthly newsletter"></p>
+        </form>
+      </div>
     
       <!-- Sign-up form end -->
     
@@ -48,8 +51,8 @@
   </main>
   <footer>
     <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/felipe-guedes-maciel-a524005a/">Felipe Maciel</a>.
     </div>
   </footer>
 </body>
