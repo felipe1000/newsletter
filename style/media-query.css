@@ -11,12 +11,37 @@
     
     main{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        /* grid-template-columns: repeat(2,1fr); */
         grid-template-areas: "statement illustration" "form-email illustration" ;
-        max-width: 645px;
+        max-width: 750px;
         width: 100%;
-        padding: 10px;
-        border-radius: 10px;
+        padding: 20px 10px 20px 30px;
+        border-radius: 35px;
+    }
+
+    h1{
+        font-size: 3.2rem;
+        margin: 40px 0 20px 0;
+    }
+
+    h2{
+        margin-top: 20px;
+    }
+
+    ul {
+        padding: 5px 0 0 30px;
+    }
+
+    li{
+        font-size: 15px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+
+    input{
+        margin: 8px 0 5px 0;
     }
 
     #illustration{
@@ -24,12 +49,21 @@
         background: white url(../assets/images/illustration-sign-up-desktop.svg) no-repeat center;
         background-size: contain;
         height: 100%;
+        width: 350px;
     
+    }
+
+    .statement {
+        padding: 5px 40px 5px 20px;
     }
 
     .attribution{
         background-color: #36384D;
         color: white;
+    }
+
+    form {
+        padding: 0 40px 0 20px;
     }
     
 }
