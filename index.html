@@ -30,8 +30,8 @@
     
       <div class="form-email">
         <h2>Email address</h2>
-        <form action="thanks.html" method="post" autocomplete="on">
-          <p><input type="email" name="email" id="iEmail" placeholder="email@company.com"></p>
+        <form action="thanks.html" method="post" autocomplete="off">
+          <p><input type="email" name="email" id="iEmail" placeholder="email@company.com" onkeyup="warning()"></p>
           <p><input type="submit" value="Subscribe to monthly newsletter"></p>
         </form>
       </div>
@@ -53,7 +53,31 @@
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://www.linkedin.com/in/felipe-guedes-maciel-a524005a/">Felipe Maciel</a>.
-    </div>
+    </div> 
   </footer>
+  <script>
+
+    var emailInput = window.document.getElementById('iEmail')
+    emailInput.addEventListener('input', warning)
+    function warning(){
+
+      var emailValue = emailInput.value
+
+        if (emailValue.indexOf('@') === -1) {
+
+            emailInput.style.backgroundColor = '#FFE8E6'
+            emailInput.style.borderColor = 'red'
+            emailInput.style.borderWidth = '4px'
+            emailInput.style.color = 'red'
+    
+        } else {
+          
+            emailInput.style.borderColor = ''
+            emailInput.style.borderWidth = '1px'
+            emailInput.style.backgroundColor = 'white'
+            emailInput.style.color = 'black'
+        }
+    }
+  </script>
 </body>
 </html>
