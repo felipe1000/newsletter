@@ -29,10 +29,10 @@
     </div>
     
       <div class="form-email">
-        <h2>Email address</h2>
-        <form action="thanks.html" method="post" autocomplete="off">
-          <p><input type="email" name="email" id="iEmail" placeholder="email@company.com" onkeyup="warning()"></p>
-          <p><input type="submit" value="Subscribe to monthly newsletter"></p>
+        <h2>Email address <span id="msg"></span></h2>
+        <form action="thanks.html" method="post" autocomplete="off" novalidate>
+          <p><input type="email" name="email" id="iEmail" placeholder="email@company.com" oninput="checkEmail()"  onkeyup="warning()"></p>
+          <p><input type="submit" value="Subscribe to monthly newsletter" id="submitButton" disabled ></p>
         </form>
       </div>
     
@@ -59,16 +59,22 @@
 
     var emailInput = window.document.getElementById('iEmail')
     emailInput.addEventListener('input', warning)
+    
+    const submitButton = document.getElementById('submitButton')
+    var msg = window.document.querySelector('span#msg')
+
     function warning(){
 
       var emailValue = emailInput.value
+      
 
         if (emailValue.indexOf('@') === -1) {
 
             emailInput.style.backgroundColor = '#FFE8E6'
-            emailInput.style.borderColor = 'red'
+            emailInput.style.borderColor = 'rgb(240, 97, 97)'
             emailInput.style.borderWidth = '4px'
-            emailInput.style.color = 'red'
+            emailInput.style.color = 'rgb(240, 97, 97)'
+            msg.innerHTML = 'Valid email required'
     
         } else {
           
@@ -76,8 +82,24 @@
             emailInput.style.borderWidth = '1px'
             emailInput.style.backgroundColor = 'white'
             emailInput.style.color = 'black'
+            msg.innerHTML = ''
         }
     }
+
+    
+    emailInput.addEventListener('input', checkEmail);
+
+    function checkEmail() {
+        const emailValue = emailInput.value;
+
+        if (emailValue.indexOf('@') === -1) {
+            submitButton.disabled = true
+            
+        } else {
+            submitButton.disabled = false
+        }
+    }
+
   </script>
 </body>
 </html>
