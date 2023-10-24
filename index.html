@@ -30,25 +30,12 @@
     
       <div class="form-email">
         <h2>Email address <span id="msg"></span></h2>
-        <form action="thanks.html" method="post" autocomplete="off" novalidate>
+        <form action="thanks.html" method="get" autocomplete="off" novalidate>
           <p><input type="email" name="email" id="iEmail" placeholder="email@company.com" oninput="checkEmail()"  onkeyup="warning()"></p>
-          <p><input type="submit" value="Subscribe to monthly newsletter" id="submitButton" disabled ></p>
+          <p><input type="submit" value="Subscribe to monthly newsletter" onclick="checkEmail()" id="submitButton"></p>
         </form>
       </div>
-    
-      <!-- Sign-up form end -->
-    
-      <!-- Success message start -->
-    
-      <!-- Thanks for subscribing!
-    
-      A confirmation email has been sent to ash@loremcompany.com.
-      Please open it and click the button inside to confirm your subscription.
-    
-      Dismiss message
-     -->
-      <!-- Success message end -->
-  </main>
+      </main>
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
@@ -61,7 +48,7 @@
     emailInput.addEventListener('input', warning)
     
     const submitButton = document.getElementById('submitButton')
-    var msg = window.document.querySelector('span#msg')
+    const msg = window.document.querySelector('span#msg')
 
     function warning(){
 
@@ -90,15 +77,15 @@
     emailInput.addEventListener('input', checkEmail);
 
     function checkEmail() {
-        const emailValue = emailInput.value;
+    const emailValue = emailInput.value;
 
-        if (emailValue.indexOf('@') === -1) {
-            submitButton.disabled = true
-            
-        } else {
-            submitButton.disabled = false
-        }
+    if (emailValue.indexOf('@') === -1) {
+        msg.innerHTML = 'Valid email required';
+        event.preventDefault(); // Isso impede o envio do formulário
+    } else {
+        msg.innerHTML = '';
     }
+}
 
   </script>
 </body>

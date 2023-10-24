@@ -144,5 +144,8 @@ span#msg{
  }
 
 #thanks{
+    display: flex;
+    height: 100vh;
     max-width: 400px;
+    align-items: center;
 }
